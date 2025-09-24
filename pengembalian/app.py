@@ -12,10 +12,15 @@ tc = next(tc for tc in test_cases if tc["name"] == pilihan)
 # Bonus: uncomment variabel (pemberitahuan, sukses, gagal)
 # kemudian definisikan value yang seharusnya
 # =====================================================
-
 # pemberitahuan = 
+def pemberitahuan(pesan):
+    st.info(pesan)
 # sukses = 
+def sukses(pesan):
+    st.success(pesan)
 # gagal = 
+def gagal(pesan):
+    st.error(pesan)
 
 if st.button("Proses Pengembalian"):
     result = process_pengembalian(copy.deepcopy(tc["buku"]), copy.deepcopy(tc["mahasiswa"]))
